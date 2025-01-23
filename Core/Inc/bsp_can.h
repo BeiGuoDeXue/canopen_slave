@@ -28,7 +28,7 @@ extern "C" {
 #include "main.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "TestAllSlave.h"
 /* USER CODE END Includes */
 
 extern CAN_HandleTypeDef hcan1;
@@ -40,7 +40,7 @@ extern CAN_HandleTypeDef hcan1;
 void MX_CAN1_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-unsigned char canSend();
+unsigned char canSend(CAN_PORT notused, Message *msg);
 void Configure_Filter(void);
 /* USER CODE END Prototypes */
 

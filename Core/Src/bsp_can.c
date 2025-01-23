@@ -21,8 +21,6 @@
 #include "bsp_can.h"
 
 /* USER CODE BEGIN 0 */
-// #include "TestAll.h"
-#include "TestAllSlave.h"
 
 CAN_TxHeaderTypeDef TXHeader;
 CAN_RxHeaderTypeDef RxHeader;
@@ -192,9 +190,9 @@ unsigned char canSend(CAN_PORT notused, Message *msg)
   for(int i = 0; i < msg->len; i++)
     TXmessage[i] = msg->data[i];
   if(HAL_CAN_AddTxMessage(&hcan1,&TXHeader,TXmessage,&pTxMailbox) == HAL_OK)
-    return 1;
-  else
     return 0;
+  else
+    return 1;
 }
 
 

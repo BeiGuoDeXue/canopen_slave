@@ -130,7 +130,7 @@ int main(void)
 //    
 //    HAL_CAN_AddTxMessage(&hcan1,&Can_Tx,txdata,&pTxMailbox);//����can��Ϣ
     printf("slave test\n");
-
+    printf("sdo_data: %d\n", sdo_data);
 		// data[0]++;
     // 添加调试信息
     printf("Node state: %d\n", TestAllSlave_Data.nodeState);
